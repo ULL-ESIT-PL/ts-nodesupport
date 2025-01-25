@@ -14,3 +14,4 @@ const justine = {
 
 const isJustineAnAdult = isAdult(justine);
 
+console.log(isJustineAnAdult);
