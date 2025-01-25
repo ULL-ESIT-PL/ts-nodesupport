@@ -1,0 +1,17 @@
+{
+  "name": "nodesupport",
+  "version": "1.0.0",
+  "description": "- https://nodejs.org/api/typescript.html#enabling",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsx",
+    "start": "node --experimental-transform-types --no-warnings",
+    "ts": "node --experimental-transform-types --disable-warning=ExperimentalWarning"
+  },
+  "keywords": [],
+  "author": "Casiano Rodriguez Leon <crguezl@ull.edu.es> (https://crguezl.github.io/)",
+  "license": "ISC",
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
