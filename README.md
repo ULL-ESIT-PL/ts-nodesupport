@@ -6,6 +6,15 @@
 
 ## Examples
 
+### Versions
+
+```
+➜  ts-nodesupport git:(main) node --version
+v23.5.0
+➜  ts-nodesupport git:(main) npm --version
+10.9.2
+```
+
 ### Disable ExperimentalWarning --disable-warning=ExperimentalWarning 
 
 ```ts
