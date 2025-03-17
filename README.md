@@ -3,7 +3,7 @@
 ## References
 
 - https://nodejs.org/api/typescript.html#enabling
-
+- https://your-ehsan.medium.com/10-mind-blowing-node-js-features-that-make-it-unstoppable-86a5e98e2fc2
 ## Examples
 
 ### Versions
@@ -73,3 +73,43 @@ true
    
    use the flag `--experimental-transform-types`. 
    To disable this feature, use the flag `--no-experimental-strip-types`.
+
+
+## Watch Mode
+
+The --watch flag enables automatic re-running of your code whenever files change.
+This means you no longer need to use `nodemon` or manually restart your tests or applications.
+
+Simply run your tests with the --watch flag, and Node.js will monitor your files for any changes, automatically re-running the tests upon saving.
+
+```
+➜  ts-nodesupport git:(main) ✗ node --help | grep watch
+  --watch                     run in watch mode
+  --watch-path=...            path to watch
+  --watch-preserve-output     preserve outputs on watch mode restart
+```
+
+## env-file Flag 
+
+Node.js now supports loading environment variables directly from a specified `.env` file using 
+the `--env-file` flag. This feature allows you to manage your environment variables more effectively without needing additional libraries.
+
+```
+➜  ts-nodesupport git:(main) ✗ node --help | grep env-file
+  --env-file=...              set environment variables from supplied
+  --env-file-if-exists=...    set environment variables from supplied
+```
+
+## Top level Await
+
+With the latest updates, Node.js now supports top-level await, allowing you to use the await keyword outside of an async function. This simplifies writing asynchronous code and improves readability.
+
+```js 
+✗ ./top-level-await.mts
+#!/usr/bin/env node --experimental-transform-types --disable-warning=ExperimentalWarning --env-file=.env
+
+import { readFile } from "fs/promises";
+
+const contents = await readFile("./top-level-await.mts", "utf-8");
+console.log(contents)
+```

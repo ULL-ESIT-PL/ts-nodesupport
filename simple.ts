@@ -1,4 +1,4 @@
-#!/usr/bin/env node --experimental-transform-types --disable-warning=ExperimentalWarning
+#!/usr/bin/env node --experimental-transform-types --disable-warning=ExperimentalWarning --env-file=.env
 
 type User = {
   name: string;
@@ -19,3 +19,4 @@ const justine = {
 const isJustineAnAdult = isAdult(justine);
 
 console.log(isJustineAnAdult);
+console.log(`The secret is "${process.env.SECRET_VALUE}"`); 
