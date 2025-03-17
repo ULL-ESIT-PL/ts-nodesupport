@@ -1,3 +1,5 @@
+#!/usr/bin/env node --experimental-transform-types --disable-warning=ExperimentalWarning
+
 type User = {
   name: string;
   age: number;

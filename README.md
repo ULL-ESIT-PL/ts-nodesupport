@@ -62,3 +62,14 @@ console.log(isJustineAnAdult);
 
 true
 ```
+
+## Type Stripping
+
+1. By default Node.js will execute TypeScript files that contains only **erasable** TypeScript syntax. 
+2. Node.js **will replace TypeScript syntax with whitespace**, and **no type checking is performed**. 
+3. To enable the transformation of non erasable TypeScript syntax, which requires JavaScript code generation, such as
+   1.  enum declarations, 
+   2.  parameter properties 
+   
+   use the flag `--experimental-transform-types`. 
+   To disable this feature, use the flag `--no-experimental-strip-types`.
